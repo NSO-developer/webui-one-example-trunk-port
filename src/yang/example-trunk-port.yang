@@ -1,0 +1,43 @@
+module example-trunk-port {
+  namespace "http://com/example/exampletrunkport";
+  prefix example-trunk-port;
+
+  import ietf-inet-types {
+    prefix inet;
+  }
+  import tailf-ncs {
+    prefix ncs;
+  }
+
+  list example-trunk-port {
+    key name;
+
+    uses ncs:service-data;
+    ncs:servicepoint "example-trunk-port";
+
+    leaf name {
+      type string;
+    }
+
+    list device {
+      description "List with devices used by trunk service. Should be 2 devices";
+      key name;
+      leaf name {
+        type leafref {
+          path "/ncs:devices/ncs:device/ncs:name";
+        }
+      }
+      leaf-list interface {
+        description "Interface number. For example 0/1";
+        type string;
+      }
+    }
+
+    leaf vlanid {
+      description "Allowed vlan id for trunk. In range 1 to 254";
+      type uint16 {
+          range 1..254;
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">    
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js"></script>
+        <title>Example package with a simple webui to set up a trunk-port</title>
+    </head>
+    <body>
+        <div>
+            <div class="header">
+                <div class="header-inner">
+                    <a href="/webui-one/" class="header-link">
+                        <img src="cisco.svg" alt="Cisco" class="logo" style="">
+                    </a>
+                    <div class="title">
+                        Example Package Application
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <h1>Example package with a simple webui to set up a trunk-port</h1>
+                <div class="flex">
+                    <div class="container-50">
+                        <div>
+                            <button class="link-button" onclick="window.location.href='/webui-one';">Return to Cisco NSO WebUI</button>
+                        </div>
+                        <div>
+                            <button class="link-button" onclick="window.location.href='/webui-one/CommitManager';">Go to Cisco NSO Commit Manager</button>
+                        </div>
+                    </div>
+                </div>
+                <p>This is an example package with example for request, create and set value.</p>
+                <p>More information about the NSO JSON-RPC API is available in the NSO userguide.</p>
+                <p>View the source code of the request here: <a href="script.js">script.js</a></p>
+                <p>Fill out the values and click on "Create Trunk from values".</p>
+                <p>If the instance name exists, values (interfaces and vlan) will be updated.</p>
+                <p>When trunk is created in on your Transaction Handle, click "Go to Cisco NSO Commit Manager" to see the changes in the commit manager.</p>
+                <p>If you in the Commit Manager press "Commit" the data will be commited to your NSO.</p>
+                <div class="form">
+                    <div class="container-50">
+                        <div class="input-container">
+                            <div class="input-heading">Trunk name:</div>
+                            <input list="trunks" id="trunkname" class="input-field" placeholder="MyNewTrunk">
+                            <datalist id="trunks"> </datalist>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-heading">Device A:</div>
+                            <input type="text" value="" id="setDeviceA" class="input-field" placeholder="ce0"></input>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-heading">Device A Interface (GigabitEthernet):</div>
+                            <input type="text" value="" id="setInterfaceA" class="input-field" placeholder="0/1"></input>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-heading">Device B:</div>
+                            <input type="text" value="" id="setDeviceB" class="input-field" placeholder="ce1"></input>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-heading">Device B Interface (GigabitEthernet):</div>
+                            <input type="text" value="" id="setInterfaceB" class="input-field" placeholder="0/10"></input>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-heading">Allowed Vlan:</div>
+                            <input type="text" value="" id="setVlan" class="input-field" placeholder="11"></input>
+                        </div>
+                        <div>
+                            <button class="submit-button" onclick="doCreate();">Create/Update Trunk from values</button>
+                        </div>
+                        <div id="result"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

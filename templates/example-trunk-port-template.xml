@@ -1,0 +1,27 @@
+<config-template xmlns="http://tail-f.com/ns/config/1.0"
+                 servicepoint="example-trunk-port">
+  <devices xmlns="http://tail-f.com/ns/ncs">
+    <device>
+      <name>{/device/name}</name>
+      <config>
+        <interface xmlns="urn:ios">                      
+          <GigabitEthernet>                              
+            <name>{interface}</name>                             
+            <switchport>                                 
+              <mode>   
+                <trunk/>                                 
+              </mode>  
+              <trunk>  
+                <allowed>                                
+                  <vlan>                                 
+                    <vlans>{/vlanid}</vlans>                     
+                  </vlan>                                
+                </allowed>                               
+              </trunk> 
+            </switchport>                                
+          </GigabitEthernet>                             
+        </interface>
+      </config>
+    </device>
+  </devices>
+</config-template>
