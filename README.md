@@ -7,8 +7,8 @@ webui-one-example-trunk-port NSO package demonstrates how the JSON-RPC API and a
 * This application is based on a template for use with Cisco ios devices.
 
 ## Package contents
-* __src/yang/example-trunk-port.yang__ Yang service definition.
-* __templates/example-trunk-port-template.xml__ Config template for Cisco ios device used with the service.
+* __src/yang/webui-one-example-trunk-port.yang__ Yang service definition.
+* __templates/webui-one-example-trunk-port-template.xml__ Config template for Cisco ios device used with the service.
 * __webui/webui.json__ Required for the package to be recognised by the NSO webui and a link to the package webui will be visible on the ApplicationHUB.
 * __webui/index.html__ Required entrypoint for the package webui, where the user will end up when clicking on the link in the ApplicationHUB.
 * __webui/script.js__ Simple Javascript to peform a request to the NSO JSON-RPC.
