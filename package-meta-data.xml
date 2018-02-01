@@ -1,10 +1,6 @@
 <ncs-package xmlns="http://tail-f.com/ns/ncs-packages">
-  <name>example-trunk-port</name>
+  <name>webui-one-example-trunk-port</name>
   <package-version>1.0</package-version>
-  <description>Template-based example-trunk-port resource facing service</description>
+  <description>Template-based webui-one-example-trunk-port resource facing service</description>
   <ncs-min-version>4.5</ncs-min-version>
-
-  <!-- It's possible to add more components to the -->
-  <!-- same package, multiple services, data providers etc -->
-
 </ncs-package>

@@ -1,6 +1,6 @@
-module example-trunk-port {
-  namespace "http://com/example/exampletrunkport";
-  prefix example-trunk-port;
+module webui-one-example-trunk-port {
+  namespace "http://com/example/webuioneexampletrunkport";
+  prefix webui-one-example-trunk-port;
 
   import ietf-inet-types {
     prefix inet;
@@ -9,11 +9,11 @@ module example-trunk-port {
     prefix ncs;
   }
 
-  list example-trunk-port {
+  list webui-one-example-trunk-port {
     key name;
 
     uses ncs:service-data;
-    ncs:servicepoint "example-trunk-port";
+    ncs:servicepoint "webui-one-example-trunk-port";
 
     leaf name {
       type string;

@@ -1,5 +1,5 @@
 <config-template xmlns="http://tail-f.com/ns/config/1.0"
-                 servicepoint="example-trunk-port">
+                 servicepoint="webui-one-example-trunk-port">
   <devices xmlns="http://tail-f.com/ns/ncs">
     <device>
       <name>{/device/name}</name>

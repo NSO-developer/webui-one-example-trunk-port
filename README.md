@@ -1,7 +1,7 @@
 # NSO example package, simple webui to create a trunk port
 
 ## Purpose
-Example-trunk-port NSO package demonstrates how the JSON-RPC API and a simple webui can be used in combination with NSO webui-one to create custom applications.
+webui-one-example-trunk-port NSO package demonstrates how the JSON-RPC API and a simple webui can be used in combination with NSO webui-one to create custom applications.
 * This package will set up a simple trunk between two swithces.
 * The package is based on a NSO service template.
 * This application is based on a template for use with Cisco ios devices.
@@ -25,10 +25,10 @@ Example-trunk-port NSO package demonstrates how the JSON-RPC API and a simple we
 
 ## Installation
 __Download and set up__
-* Download and put the package contents in the NSO `packages/example-trunk-port` folder.
+* Download and put the package contents in the NSO `packages/webui-one-example-trunk-port` folder.
 * You have to source nso to reach nso commands like ncs_cli
   * _source NSO-install-folder/nsoenv_
-* in `example-trunk-port/src/` run _make_
+* in `webui-one-example-trunk-port/src/` run _make_
 
 __Reload packages using cli or webui.__
 * CLI: start ncs_cli
@@ -40,7 +40,7 @@ __You have to restart NSO__
 * Restart NSO
 
 The example-webui should now be accessible from the ApplicationHUB, _nso-host/webui-one/_ or
-directly at _nso-host/example-trunk-port_
+directly at _nso-host/custom/webui-one-example-trunk-port_
 
 ## Usage
 Create a new trunk configuration:

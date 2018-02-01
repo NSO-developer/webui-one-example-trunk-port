@@ -92,7 +92,7 @@ const setValue = (th, path, value) => (
 );
 
 // Set basePath to "example-trunk-port" service
-const basePath = '/example-trunk-port:example-trunk-port';
+const basePath = '/webui-one-example-trunk-port:webui-one-example-trunk-port';
 
 // Create a new trunk instance
 const createNewTrunk = (th, trunkName) => {
@@ -153,7 +153,7 @@ const doCreate = () => { // eslint-disable-line no-unused-vars
 
 // Get a list of existing trunks created with this service
 const getExistingTrunks = (th) => {
-    const path = '/example-trunk-port:example-trunk-port';
+    const path = '/webui-one-example-trunk-port:webui-one-example-trunk-port';
     const resultAs = 'leaf_value_as_string';
     const selection = ['name'];
     jsonrpc('query', { th, path, result_as: resultAs, selection }).then((res) => {
